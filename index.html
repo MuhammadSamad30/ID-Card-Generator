@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ID-Card Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h3>Created By Muhammad Samad</h3>
+
+    <!-- Section-card-->
+
+    <div class="form-container">
+      <h1>
+        ID Card Generator &nbsp;<i
+          class="bx bxs-id-card"
+          style="color: #a52a2a"
+        ></i>
+      </h1>
+      <form id="idForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required /><br />
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required /><br />
+
+        <label for="rollNumber">Roll Number:</label>
+        <input type="text" id="rollNumber" name="rollNumber" required /><br />
+
+        <label for="imageUpload">Upload Your Image:</label>
+        <input
+          type="file"
+          id="imageUpload"
+          name="imageUpload"
+          accept="image/*"
+          required
+        /><br />
+
+        <button type="submit">Generate ID</button>
+      </form>
+      <button id="downloadPDF">
+        Download as PDF <i class="bx bxs-file-pdf" style="color: #25f3f3"></i>
+      </button>
+    </div>
+
+    <div class="preview-container">
+      <h2>Preview</h2>
+      <div class="id-card" id="idCardPreview">
+        <div class="photo">
+          <img id="previewImage" src="" alt="ID Photo" />
+        </div>
+        <div class="details">
+          <p><strong>Name:</strong> <span id="previewName">Your Name</span></p>
+          <p><strong>Age:</strong> <span id="previewAge">Your Age</span></p>
+          <p>
+            <strong>Roll Number:</strong>
+            <span id="previewRollNumber">Your Roll Number</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section-card end-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
