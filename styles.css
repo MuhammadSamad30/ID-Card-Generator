@@ -1,28 +1,26 @@
 body {
-    background-color: #da4a75;
-    overflow-x: hidden;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-  }
+  background-color: #da4a75;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
 
 /*        card        */
 
-h3{
-    color: #fff;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-    z-index: 1000;
+h3 {
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 1000;
 }
-
-
 
 .form-container,
 .preview-container {
@@ -37,7 +35,7 @@ h3{
 h1,
 h2 {
   text-align: center;
-} 
+}
 
 h1 i {
   font-size: 30px;
@@ -144,20 +142,21 @@ button:hover {
     padding: 20px;
   }
 
-  h3{
+  h3 {
     position: absolute;
   }
 
-  .form-container, .preview-container {
+  .form-container,
+  .preview-container {
     max-width: 100%;
     margin-bottom: 20px;
   }
-  
-  .form-container{
+
+  .form-container {
     margin-top: 50px;
   }
 
-  .preview-container{
+  .preview-container {
     width: 85%;
   }
 
