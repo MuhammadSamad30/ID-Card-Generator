@@ -24,25 +24,22 @@ function updatePreview() {
 
 function generatePDF() {
     const { jsPDF } = window.jspdf;
+    
     const doc = new jsPDF();
 
-    // Get the values from the preview
     const name = document.getElementById('previewName').textContent;
     const age = document.getElementById('previewAge').textContent;
     const rollNumber = document.getElementById('previewRollNumber').textContent;
     const imgData = document.getElementById('previewImage').src;
 
-    // Add image
     if (imgData) {
-        doc.addImage(imgData, 'PNG', 10, 10, 50, 50); // Adjust dimensions as needed
+        doc.addImage(imgData, 'PNG', 10, 10, 50, 50);
     }
 
-    // Add text
     doc.setFontSize(12);
     doc.text(`Name: ${name}`, 70, 20);
     doc.text(`Age: ${age}`, 70, 30);
     doc.text(`Roll Number: ${rollNumber}`, 70, 40);
 
-    // Save the PDF
-    doc.save('ID_Card.pdf');
+    doc.save(`ID_Card_${name}_${new Date().getTime()}.pdf`);
 }

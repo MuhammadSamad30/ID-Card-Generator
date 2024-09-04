@@ -59,8 +59,40 @@ label {
 input[type="text"],
 input[type="number"] {
   margin-bottom: 10px;
-  border-color: #5e3bee;
+  padding: 10px;
+  border: 2px solid transparent;
   border-radius: 5px;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:hover,
+input[type="number"]:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-image: linear-gradient(45deg, #ff8c00, #ff0080) 1;
+  box-shadow: 0px 0px 15px rgba(255, 140, 0, 0.5);
+}
+
+input[type="file"] {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="file"]:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+input[type="file"]:focus {
+  border-image: linear-gradient(45deg, #00f260, #0575e6) 1;
+  box-shadow: 0px 0px 15px rgba(0, 162, 232, 0.5);
 }
 
 button {
@@ -101,4 +133,42 @@ button:hover {
 
 .details {
   text-align: left;
+}
+
+/*      Responsive    */
+
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  h3{
+    position: absolute;
+  }
+
+  .form-container, .preview-container {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .form-container{
+    margin-top: 50px;
+  }
+
+  .preview-container{
+    width: 85%;
+  }
+
+  .id-card {
+    width: 80%;
+    align-items: center;
+    padding-left: 10%;
+  }
+
+  .photo img {
+    width: 80px;
+    height: 80px;
+  }
 }
